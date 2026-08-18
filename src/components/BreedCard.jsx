@@ -62,14 +62,13 @@ duration-300
       <img
 
         src={breed.image}
-
         alt={breed.name}
-
-        className="
-        w-full
-        h-64
-        object-cover
-        "
+        loading="lazy"
+        decoding="async"
+        className=" w-full h-64 object-cover"
+        onError={(e) => {
+          e.currentTarget.src = "/dog-pics/1.webp";
+        }}
 
       />
 
