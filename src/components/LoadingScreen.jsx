@@ -43,18 +43,18 @@ function LoadingScreen({ onFinish }) {
   }, [onFinish]);
 
   return (
-    <div className="fixed inset-0 z-[100] flex min-h-screen items-center justify-center overflow-hidden bg-orange-50 px-6">
+    <div className="fixed inset-0 z-100 flex min-h-screen items-center justify-center overflow-hidden bg-orange-50 px-6">
       {/* Decorative paws */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden opacity-[0.08]">
         <span className="absolute left-[10%] top-[15%] rotate-[-25deg] text-7xl">
           🐾
         </span>
 
-        <span className="absolute right-[12%] top-[20%] rotate-[20deg] text-6xl">
+        <span className="absolute right-[12%] top-[20%] rotate-20 text-6xl">
           🐾
         </span>
 
-        <span className="absolute bottom-[15%] left-[20%] rotate-[30deg] text-8xl">
+        <span className="absolute bottom-[15%] left-[20%] rotate-30 text-8xl">
           🐾
         </span>
 
@@ -75,7 +75,7 @@ function LoadingScreen({ onFinish }) {
             🎾
           </span>
 
-          <div className="h-[2px] w-20 rounded-full bg-orange-200" />
+          <div className="h-0.5 w-20 rounded-full bg-orange-200" />
         </div>
 
         <p className="mb-3 text-sm font-bold tracking-[0.3em] text-orange-500">
@@ -86,7 +86,7 @@ function LoadingScreen({ onFinish }) {
           FIND YOUR DOG
         </h1>
 
-        <p className="mb-8 min-h-[48px] text-lg text-gray-600">
+        <p className="mb-8 min-h-12 text-lg text-gray-600">
           {loadingMessages[messageIndex]}
         </p>
 

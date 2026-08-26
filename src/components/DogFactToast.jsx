@@ -9,7 +9,7 @@ function DogFactToast({ fact, onClose }) {
         fixed
         bottom-6
         right-6
-        z-[60]
+        z-60
         w-[calc(100%-3rem)]
         max-w-sm
         animate-[slideIn_0.4s_ease-out]

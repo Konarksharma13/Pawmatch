@@ -27,7 +27,7 @@ export default function BreedModal({ breed, close }) {
               max-h-[90vh]
               w-full max-w-2xl
               overflow-y-auto
-              rounded-[2rem]
+              rounded-4xl
               bg-white
               shadow-2xl
             "
@@ -56,7 +56,7 @@ export default function BreedModal({ breed, close }) {
                 ×
               </button>
 
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 pt-20">
+              <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/70 to-transparent p-6 pt-20">
                 <p className="text-sm font-medium text-white/70">
                   {breed.size} companion
                 </p>
