@@ -14,6 +14,9 @@ Created to celebrate **International Dog Day**, the project combines thoughtful 
 
 <!-- Demo GIF -->
 
+https://github.com/user-attachments/assets/29081bbd-31a8-4033-9e85-e30e6b20db38
+
+
 ---
 
 ## ✨ Philosophy
