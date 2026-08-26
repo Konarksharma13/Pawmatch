@@ -1,71 +1,48 @@
 import BreedCard from "./BreedCard";
 
-
-export default function BreedGrid({
+function BreedGrid({
   breeds,
   onSelect,
   favorites,
   toggleFavorite,
   compare,
-  toggleCompare
-}){
+  toggleCompare,
+}) {
+  if (breeds.length === 0) {
+    return (
+      <div className="py-20 text-center">
+        <p className="text-xl font-semibold text-gray-700">
+          No dogs found 🐶
+        </p>
 
+        <p className="mt-2 text-gray-500">
+          Try searching for another breed.
+        </p>
+      </div>
+    );
+  }
 
   return (
+    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      {breeds.map((breed) => {
+        const isCompared = compare.some(
+          (dog) => dog.id === breed.id
+        );
 
-    <div
-      className="
-      grid
-      grid-cols-1
-      md:grid-cols-2
-      lg:grid-cols-3
-      gap-8
-      "
-    >
-
-      {
-breeds.length === 0 ? (
-
-<div
-className="
-col-span-full
-text-center
-py-20
-text-2xl
-"
->
-🐕 No dog found. Try another search.
-</div>
-
-) : (
-
-breeds.map((breed)=>(
-
-       <BreedCard
-
+        return (
+          <BreedCard
             key={breed.id}
-
             breed={breed}
-
-            onClick={()=>onSelect(breed)}
-
-            isFavorite={favorites.includes(breed.id)}
-
+            onSelect={onSelect}
+            favorites={favorites}
             toggleFavorite={toggleFavorite}
-
-            key={breed.id}
-
-            compare={compare}
-
+            isCompared={isCompared}
             toggleCompare={toggleCompare}
-        />
-      )))
-
-}
-
-
+          />
+        );
+      })}
     </div>
-
   );
-
 }
+
+export default BreedGrid;
