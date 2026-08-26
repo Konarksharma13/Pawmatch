@@ -25,7 +25,7 @@ export default function Hero() {
         tracking-tight
         "
       >
-        Find Your Dog
+        Paw Match
       </h1>
 
 

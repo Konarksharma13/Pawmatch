@@ -157,6 +157,7 @@ function App() {
               duration-200
               hover:scale-105
               active:scale-95
+              cursor-pointer
             "
           >
             🎲 Surprise Me
@@ -177,6 +178,7 @@ function App() {
               duration-200
               hover:bg-black
               hover:text-white
+              cursor-pointer
             "
           >
             🐾 Dog Fact
@@ -231,6 +233,7 @@ function App() {
                 duration-200
                 hover:scale-105
                 active:scale-95
+                cursor-pointer
               "
             >
               Load More Dogs 🐾
